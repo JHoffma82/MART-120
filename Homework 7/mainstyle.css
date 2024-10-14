@@ -1,0 +1,28 @@
+body {
+background-color:lightblue;}
+
+h1 {
+    color: maroon;
+    margin-left: 20px;
+}
+.redColor {
+    color:red;
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 24px;
+}
+span.redColor{ 
+    color:red
+    font-family:arial;
+    font-size:24px;
+}
+
+#specificColor {
+    color:blueviolet;
+    font-family: verdana;
+    font-size: 24px;
+}
+#specificLink {
+    color:chartreuse;
+    font-family: arial;
+    font-size: 28px;
+}
