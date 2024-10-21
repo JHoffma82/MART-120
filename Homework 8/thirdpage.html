@@ -1,0 +1,108 @@
+<html>
+
+<Head>
+    <title> My 3rd Page</title>
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+
+
+function checkboxes()
+        {
+            var firstName = document.getElementById("fName").value;
+            var eMail = document.getElementById("eMail").value;
+            var isValid = true;
+            if(firstName == "")
+            {
+                document.getElementById("fName").focus();
+                document.getElementById("fName").style.backgroundColor = "red";
+                document.getElementById("fNameMessage").innerHTML = "* Required";
+                document.getElementById("fNameMessage").style.color = "red";
+                isValid= false;
+                
+            }
+           
+            var btnSubmit = document.getElementById("btnSubmit");
+            if(eMail == "")
+            {
+                document.getElementById("eMail").focus();
+                document.getElementById("eMail").style.backgroundColor = "red";
+                document.getElementById("eMailMessage").innerHTML = "* Required";
+                document.getElementById("eMailMessage").style.color = "red";
+                btnSubmit.style.backgroundColor = "red"; 
+                isValid= false;
+
+    
+
+            }
+
+            var termsAccepted = document.querySelector('input[name="yesno"]:checked');
+            if (!termsAccepted || termsAccepted.value !== "Yes") {
+               document.getElementById("termsMessage").innerHTML = "* You must accept the terms.";
+               document.getElementById("termsMessage").style.color = "red";
+               isValid = false;
+               } else {
+               document.getElementById("termsMessage").innerHTML = "";
+               }
+               return isValid;
+            }
+    </script>
+</Head>
+<body style="background-color:blanchedalmond;">
+    <div style="margin-left: 35px;">
+
+    <h1> My 3rd Page</h1>
+<br />
+ <span class="redColor">Duck</span>
+<br>
+<span>Duck</span>
+<br>
+<a href="https://start.duckduckgo.com"class="redColor" target="_new">Duck Duck Go</a>
+<br>
+<span id="specificColor">Violet</span>
+<br>
+<span>Just the same</span>
+<br>
+<a href="https://subsidytracker.goodjobsfirst.org"
+id="specificLink" target="_new">Subsidy Tracker</a>
+<br>
+<button type="button" class="btn">Basic</button>
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-link">Link</button>
+<h2>Contact Me:</h2>
+<br />
+<form action="nextPage.html" type="Post" onsubmit="return checkboxes();">
+    <p></p>
+    <p>Full Name: <input type="text" id="fName">&nbsp;<span id="fNameMessage"></span></p>
+    <br />
+    <p>Email Address: <input type="text" id="eMail">&nbsp;<span id="eMailMessage"></span></p>
+    <br />
+    <h3>Accept Terms of Agreemnt:</h3>
+    
+    <input type="radio" name="yesno"
+    value="Yes">Yes<br>
+    <input type="radio" name="yesno"
+    value="No">No<br>
+    <span id="termsMessage"></span>
+    <br />
+    <button id="btnSubmit" class="btn btn-primary" onclick="checkboxes(); return false;">Submit Info
+    </button>
+</form>
+
+    <br />
+
+   
+
+<a href="homepage.html">Go to Homepage</a>
+<a href="secondpage.html">Go to 2nd Page</a>
+</div>
+</body>
+</html>
